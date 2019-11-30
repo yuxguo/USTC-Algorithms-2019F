@@ -12,6 +12,7 @@ def main():
     hash_p = my_hash(pattern, ascii_dict, l_pattern)
     hash_t = my_hash(text, ascii_dict, l_pattern)
     idx = -1
+    
     for i in range(0,l_text):
         if hash_t == hash_p:
             idx = i
