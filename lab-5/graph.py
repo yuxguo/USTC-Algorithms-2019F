@@ -57,6 +57,8 @@ class Graph(object):
     def setVertexColor(self, v_index, color):
         if color != self.white and color != self.white and color != self.gray:
             return False
+        if v_index >= len(self.__vertex):
+            return False
         self.__vertex[v_index].color = color
         return True
     
