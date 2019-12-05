@@ -105,7 +105,13 @@ void RB_Insert (RBTreeRoot *T, RBTree z)
     z->color = RED;
 
     /////////////////////////
-
+    z->size = z->interval.high;
+    RBTree tmp = z->parent;
+    while (tmp != T->nil)
+    {
+        tmp->size = max3(tmp->interval.high, tmp->left->size, tmp->right->size);
+        tmp = tmp->parent;
+    }
     ////////////////////////
     RB_Insert_Fixup(T, z);
 
