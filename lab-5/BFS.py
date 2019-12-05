@@ -15,7 +15,7 @@ def bfs_1(g, start_v, end_v):
         if v == end_v:
             flag = True
             break
-        l = g.getVertexAdjcent(v)
+        l = g.getVertexAdjacent(v)
         for u in l:
             if g.getVertexColor(u) == g.white:
                 g.setVertexColor(u, g.gray)
@@ -51,8 +51,8 @@ def bfs_2(g, start_v, end_v):
     while not q1.empty() and not q2.empty():
         v1 = q1.get()
         v2 = q2.get()
-        l1 = g.getVertexAdjcent(v1)
-        l2 = g.getVertexAdjcent(v2)
+        l1 = g.getVertexAdjacent(v1)
+        l2 = g.getVertexAdjacent(v2)
         if v1 in l2:
             flag =True
             break

@@ -41,7 +41,7 @@ class Graph(object):
         return 
     
 
-    def getVertexAdjcent(self, v_index):
+    def getVertexAdjacent(self, v_index):
         if v_index >= len(self.__vertex):
             return False
         s = self.__row_ptr[v_index]
